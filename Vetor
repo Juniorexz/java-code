@@ -1,0 +1,40 @@
+import java.util.List;
+import java.util.Vector;
+
+public class ExemploVetor {
+
+
+
+        public static void main(String[] args) {
+
+            List<String> filmes = new Vector<>();
+
+            //Adicionar categorias ao vector
+            filmes.add("Comédia");
+            filmes.add("Ação");
+            filmes.add("Terror");
+            filmes.add("Ficção Cientifica");
+            filmes.add("Romance");
+
+            //Altera o valor da posição do vetor
+            filmes.set(2, "Documentário");
+
+            //Remove a categoria da posição
+            filmes.remove(2);
+
+            //Remove a categoria Romance do vetor
+            filmes.remove("Romance");
+
+            //Retorna a categoria Romance ao vetor
+            System.out.println(filmes.get(0));
+
+            //Navega nas categorias
+            for (String filme : filmes) {
+                System.out.println(filmes);
+            }
+
+
+        }}
+
+
+
