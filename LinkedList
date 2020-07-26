@@ -1,0 +1,52 @@
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Queue;
+
+
+public class ExemploLinkedList {
+
+    public  static void main(String[] args) {
+
+        Queue<String> filaBanco = new LinkedList<>();
+        filaBanco.add("Renata");
+        filaBanco.add("Roberto");
+        filaBanco.add("Flávio");
+        filaBanco.add("Felipe");
+        filaBanco.add("Fernanda");
+
+        System.out.println(filaBanco);
+
+        String clienteASerAtendido = filaBanco.poll();
+        //Poll - Retorna primeiro elemento mas o remove
+        System.out.println(clienteASerAtendido);
+
+        System.out.println(filaBanco);
+
+        String primeiroCliente = filaBanco.peek();
+        //Peek - Retorna primeiro elemento mas não o remove
+
+        //filaBanco.clear();
+
+        String primeiroClienteOuErro = filaBanco.element();
+
+        System.out.println(primeiroClienteOuErro);
+
+        System.out.println(filaBanco);
+
+        for (String cliente: filaBanco) {
+            System.out.println(cliente);
+        }
+
+        Iterator<String> iteratorFilaBanco = filaBanco.iterator();
+
+        while (iteratorFilaBanco.hasNext()) {
+            System.out.println("------>" + iteratorFilaBanco.next());
+        }
+
+        System.out.println(filaBanco.size());
+
+        System.out.println(filaBanco.isEmpty());
+
+        
+    }
+}
